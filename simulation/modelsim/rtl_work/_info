@@ -1,0 +1,247 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/BaiduNetdiskWorkspace/FPGA/HDB3/simulation/modelsim
+T_opt
+!s110 1652195693
+Vd3BUz`J[a2Ao`nQ>5J4J00
+04 12 4 work HDB3_vlg_tst fast 0
+=1-58a02352f07b-627a816c-134-5248
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+Eencoded_b
+Z1 w1652192116
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8D:/BaiduNetdiskWorkspace/FPGA/HDB3/encoded_b.vhd
+Z7 FD:/BaiduNetdiskWorkspace/FPGA/HDB3/encoded_b.vhd
+l0
+L5
+VG6oWn;OzTl^Q_YkI2LLI`2
+!s100 kVll:hHi_h[[_UIEAEDLz2
+Z8 OL;C;10.4;61
+31
+Z9 !s110 1652195690
+!i10b 1
+Z10 !s108 1652195690.557000
+Z11 !s90 -reportprogress|300|-93|-work|work|D:/BaiduNetdiskWorkspace/FPGA/HDB3/encoded_b.vhd|
+Z12 !s107 D:/BaiduNetdiskWorkspace/FPGA/HDB3/encoded_b.vhd|
+!i113 0
+Z13 o-93 -work work
+Z14 tExplicit 1
+Abhv
+R2
+R3
+R4
+R5
+DEx4 work 9 encoded_b 0 22 G6oWn;OzTl^Q_YkI2LLI`2
+l13
+L11
+VHY:JkJ=5mPTHDN^7[A2>b3
+!s100 AZTV@e`k]<=>NAfjdAnFG3
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Eencoded_v
+Z15 w1652194515
+R2
+R3
+R4
+R5
+R0
+Z16 8D:/BaiduNetdiskWorkspace/FPGA/HDB3/encoded_v.vhd
+Z17 FD:/BaiduNetdiskWorkspace/FPGA/HDB3/encoded_v.vhd
+l0
+L5
+VKg[@DUBhDIjgb@jiWXm5z1
+!s100 Ba?mXMmO;LN<D5e3z59hD2
+R8
+31
+R9
+!i10b 1
+Z18 !s108 1652195690.638000
+Z19 !s90 -reportprogress|300|-93|-work|work|D:/BaiduNetdiskWorkspace/FPGA/HDB3/encoded_v.vhd|
+Z20 !s107 D:/BaiduNetdiskWorkspace/FPGA/HDB3/encoded_v.vhd|
+!i113 0
+R13
+R14
+Abhv
+R2
+R3
+R4
+R5
+DEx4 work 9 encoded_v 0 22 Kg[@DUBhDIjgb@jiWXm5z1
+l11
+L10
+VQUUB_?G7;lAC;FBOGO=SU3
+!s100 f8dAe0^d^^h5IMKf@TV5c3
+R8
+31
+R9
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R13
+R14
+Efreq_clk
+Z21 w1652097110
+R2
+R3
+R4
+R5
+R0
+Z22 8D:/BaiduNetdiskWorkspace/FPGA/HDB3/freq_clk.vhd
+Z23 FD:/BaiduNetdiskWorkspace/FPGA/HDB3/freq_clk.vhd
+l0
+L5
+VL;^kc@=7zo>3SPB8eYKjI0
+!s100 ARQ[Ub>cYC[B>21GIQE570
+R8
+31
+Z24 !s110 1652195691
+!i10b 1
+Z25 !s108 1652195691.749000
+Z26 !s90 -reportprogress|300|-93|-work|work|D:/BaiduNetdiskWorkspace/FPGA/HDB3/freq_clk.vhd|
+Z27 !s107 D:/BaiduNetdiskWorkspace/FPGA/HDB3/freq_clk.vhd|
+!i113 0
+R13
+R14
+Abhv
+R2
+R3
+R4
+R5
+DEx4 work 8 freq_clk 0 22 L;^kc@=7zo>3SPB8eYKjI0
+l12
+L10
+V_dH6TGBW<G2JWL47BZ8lE2
+!s100 cWC@?_mMZN_@3;gkmi23W1
+R8
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R13
+R14
+Ehdb3
+Z28 w1652195235
+R4
+R5
+R0
+Z29 8D:/BaiduNetdiskWorkspace/FPGA/HDB3/HDB3.vhd
+Z30 FD:/BaiduNetdiskWorkspace/FPGA/HDB3/HDB3.vhd
+l0
+L24
+VA^>]fa[nCNR228b1R6X;Y0
+!s100 =cE0B6^<S08bi0=c?55J<2
+R8
+31
+R9
+!i10b 1
+Z31 !s108 1652195690.472000
+Z32 !s90 -reportprogress|300|-93|-work|work|D:/BaiduNetdiskWorkspace/FPGA/HDB3/HDB3.vhd|
+Z33 !s107 D:/BaiduNetdiskWorkspace/FPGA/HDB3/HDB3.vhd|
+!i113 0
+R13
+R14
+Abdf_type
+R4
+R5
+DEx4 work 4 hdb3 0 22 A^>]fa[nCNR228b1R6X;Y0
+l65
+L32
+V2:`4L6Kbo7kNTj0<5HllD2
+!s100 PTgGzMJWja:R[F:6NLDjn3
+R8
+31
+R9
+!i10b 1
+R31
+R32
+R33
+!i113 0
+R13
+R14
+vHDB3_vlg_tst
+R24
+!i10b 1
+!s100 =fb?7koS0V7FDHR9oZM9_2
+I6L2P;5ifaQdFXIh]JLSl@3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1652195641
+8D:/BaiduNetdiskWorkspace/FPGA/HDB3/simulation/modelsim/HDB3.vt
+FD:/BaiduNetdiskWorkspace/FPGA/HDB3/simulation/modelsim/HDB3.vt
+L0 28
+OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1652195691.924000
+!s107 D:/BaiduNetdiskWorkspace/FPGA/HDB3/simulation/modelsim/HDB3.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/BaiduNetdiskWorkspace/FPGA/HDB3/simulation/modelsim|D:/BaiduNetdiskWorkspace/FPGA/HDB3/simulation/modelsim/HDB3.vt|
+!i113 0
+o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+D:/BaiduNetdiskWorkspace/FPGA/HDB3/simulation/modelsim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@h@d@b3_vlg_tst
+Em_seq
+Z34 w1652193862
+R4
+R5
+R0
+Z35 8D:/BaiduNetdiskWorkspace/FPGA/HDB3/m_seq.vhd
+Z36 FD:/BaiduNetdiskWorkspace/FPGA/HDB3/m_seq.vhd
+l0
+L5
+VdNI605;k?<Sb0m=S=<?IA3
+!s100 h>LU@86`Ta]ACXKBND]d01
+R8
+31
+R24
+!i10b 1
+Z37 !s108 1652195691.846000
+Z38 !s90 -reportprogress|300|-93|-work|work|D:/BaiduNetdiskWorkspace/FPGA/HDB3/m_seq.vhd|
+Z39 !s107 D:/BaiduNetdiskWorkspace/FPGA/HDB3/m_seq.vhd|
+!i113 0
+R13
+R14
+Abhv
+R4
+R5
+DEx4 work 5 m_seq 0 22 dNI605;k?<Sb0m=S=<?IA3
+l12
+L10
+V=iOO8lD>_[678LS7eUJXL0
+!s100 9>HoD[oAXlc:GBc_k]16[0
+R8
+31
+R24
+!i10b 1
+R37
+R38
+R39
+!i113 0
+R13
+R14

@@ -1,0 +1,42 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity encoded_b is 
+	port(clk:in std_logic;
+		  freq_in:in std_logic_vector(1 downto 0);
+		  freq_out: out std_logic_vector(1 downto 0));
+end;
+
+architecture bhv of encoded_b is
+signal temp0,temp1,temp2,temp3:std_logic_vector(1 downto 0);
+begin
+p1:process(clk,freq_in)
+begin
+	temp3<=temp2;
+	temp2<=temp1;
+	temp1<=temp0;
+	temp0<=freq_in;
+end process;
+
+p2:process(clk,freq_in) is
+variable	count,first_v: integer range 0 to 4;
+begin
+	if clk'event and clk='1' then
+		if(temp0="11") then
+			count:=0;
+			first_v:=0;
+		elsif(temp0="01") then 
+			count:=count+1;
+			first_v:=1;
+		else
+			first_v:=1;
+		end if;
+	end if;
+	if count=0 and first_v=1 and temp0="11" then
+		freq_out<="10";
+	else
+		freq_out<=temp3;
+	end if;
+end process;
+end;

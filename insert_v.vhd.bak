@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity insert_v is 
+	port(clk: in std_logic;
+		  seq_in: in std_logic_vector(1 downto 0);
+		  seq_out: out std_logic_vector(1 downto 0));
+end;
+
+architecture bhv of insert_v is
+signal 
+begin
+p1:process(clk,seq_in) is 
+	

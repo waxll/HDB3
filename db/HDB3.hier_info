@@ -1,0 +1,106 @@
+|HDB3
+m_out <= m_seq:inst2.m
+clk => freq_clk:inst1.clk
+code_out <= hdb3_decoder:inst11.deout
+b_out[0] <= add_b:inst5.addb_out[0]
+b_out[1] <= add_b:inst5.addb_out[1]
+polar_v[0] <= polar:inst12.seq_out[0]
+polar_v[1] <= polar:inst12.seq_out[1]
+v_out[0] <= encoded_v:inst.freq_out[0]
+v_out[1] <= encoded_v:inst.freq_out[1]
+
+
+|HDB3|m_seq:inst2
+clk => m_init[0].CLK
+clk => m_init[1].CLK
+clk => m_init[2].CLK
+clk => m_init[3].CLK
+clk => m_init[4].CLK
+clk => m_init[5].CLK
+clk => m_init[6].CLK
+m <= m_init[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HDB3|freq_clk:inst1
+clk => clk_out~reg0.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HDB3|hdb3_decoder:inst11
+clk => deout~reg0.CLK
+clk => m[0].CLK
+clk => m[1].CLK
+clk => D0[0].CLK
+clk => D0[1].CLK
+clk => D0[2].CLK
+clk => D0[3].CLK
+clk => D1[0].CLK
+clk => D1[1].CLK
+clk => D1[2].CLK
+clk => D1[3].CLK
+dein[0] => Equal0.IN3
+dein[0] => Equal1.IN3
+dein[0] => Equal2.IN3
+dein[0] => D0.DATAA
+dein[0] => m.DATAA
+dein[0] => D0.DATAA
+dein[1] => Equal0.IN2
+dein[1] => Equal1.IN2
+dein[1] => Equal2.IN2
+dein[1] => D1.DATAA
+dein[1] => m.DATAA
+dein[1] => D1.DATAA
+deout <= deout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HDB3|polar:inst12
+clk => seq_out[0]~reg0.CLK
+clk => seq_out[1]~reg0.CLK
+clk => \p1:even_v.CLK
+clk => \p1:even_b.CLK
+seq_in[0] => Equal0.IN3
+seq_in[0] => Equal1.IN3
+seq_in[0] => Equal2.IN3
+seq_in[1] => Equal0.IN2
+seq_in[1] => Equal1.IN2
+seq_in[1] => Equal2.IN2
+seq_out[0] <= seq_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[1] <= seq_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HDB3|add_b:inst5
+clk => firstv.CLK
+clk => counter.CLK
+clk => d[0][0].CLK
+clk => d[0][1].CLK
+clk => d[1][0].CLK
+clk => d[1][1].CLK
+clk => d[2][0].CLK
+clk => d[2][1].CLK
+clk => d[3][0].CLK
+clk => d[3][1].CLK
+add_in[0] => d[0][0].DATAIN
+add_in[1] => d[0][1].DATAIN
+addb_out[0] <= addb_out.DB_MAX_OUTPUT_PORT_TYPE
+addb_out[1] <= addb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HDB3|encoded_v:inst
+clk => freq_out[0]~reg0.CLK
+clk => freq_out[1]~reg0.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+freq_in => count.OUTPUTSELECT
+freq_in => count.OUTPUTSELECT
+freq_in => freq_out.OUTPUTSELECT
+freq_in => freq_out.OUTPUTSELECT
+freq_out[0] <= freq_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+freq_out[1] <= freq_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

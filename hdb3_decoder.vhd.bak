@@ -1,0 +1,44 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY hdb3_decoder   IS
+PORT(     clk           : IN STD_LOGIC;
+        h          : INOUT STD_LOGIC_VECTOR(1 downto 0) ;
+        coderout : out STD_LOGIC
+        );        
+END  ENTITY hdb3_decoder ;
+
+ARCHITECTURE decoder OF hdb3_decoder  IS
+SIGNAL reg0 : STD_LOGIC_VECTOR(4 downto 0);  --两个五位寄存器
+SIGNAL reg1 : STD_LOGIC_VECTOR(4 downto 0);
+BEGIN
+
+process (clk,h,reg0,reg1)
+BEGIN
+if(clk'EVENT AND clk = '1') then
+    reg0 <= h(0) & reg0(4 downto 1); reg1 <= h(1) & reg1(4 downto 1); 
+    if (h(0)='1' and h(1)='0' and reg0(4 downto 1)="0001"and reg1(4 downto 1)="0000")      -- +1000+1 译码10000
+        then reg0 <= "00001"; reg1 <= "00000";
+    elsif (h(0)='0' and  h(1)='1' and reg0(4 downto 1)="0000"and reg1(4 downto 1)="0001")      -- -1000-1 译码10000
+        then reg0 <= "00001"; reg1 <= "00000";
+    elsif (h(0)='0' and  h(1)='1' and reg0(4 downto 2)="000"and reg1(4 downto 2)="001")    -- -100-1 译码0000
+        then reg0 <= "0000" & reg0(1); reg1 <= "0000" & reg1(1);
+    elsif ( h(0)='1' and h(1)='0' and reg0(4 downto 2)="001" and reg1(4 downto 2)="000")    -- +00+1 译码0000
+        then reg0 <= "0000" & reg0(1); reg1 <= "0000" & reg1(1);
+    end if;
+end if;
+end process;
+
+process(clk)
+begin
+if (clk'EVENT AND clk = '1') then
+    if reg0(0)='1' or reg1(0)='1' then        --把+1（01）、11（-1）译码成一位 1
+        coderout<='1';
+    --elsif reg0(0)='1' and reg1(0)='0'
+    --    then coderout<='1';
+    else
+        coderout<='0';                    -- 00 译码为 0
+    end if;
+end if;
+end process;

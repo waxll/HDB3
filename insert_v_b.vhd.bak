@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity insert_v is 
+	port(clk: in std_logic;
+		  seq_in: in std_logic_vector(1 downto 0);
+		  seq_out: out std_logic_vector(1 downto 0));
+end;
+
+architecture bhv of insert_v is
+signal temp0,temp1,temp2,temp3: std_logic_vector(1 downto 0);
+begin
+p1:process(clk,seq_in) is
+	variable pol:std_logic;
+	begin
+		if clk'event and clk='1' then
+			temp3<=temp2;
+			temp2<=temp1;
+			temp1<=temp0;
+			temp0<=seq_in;
+			if(temp0=temp3) then
+				temp3<="10";
+				temp0<="11";
+			end if;
+			seq_out<=temp3;
+		end if;
+	end process;
+end;
+				
